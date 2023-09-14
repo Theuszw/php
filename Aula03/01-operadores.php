@@ -28,7 +28,7 @@
                     echo 'Vamos calcular: $a + 3 * 4 + 5 * $b<br>';
                     echo "Resultado: ";
                     echo $a + 3 * 4 + 5 * $b;
-                    echo "<br>Porque" . ' $a' . " vale $a <br>";
+                    echo "<br>Porque " . '$a' ." vale $a <br>";
                     echo 'e $b vale 4 <br>'; 
                     echo "Primeira multiplicação: 3 x 4 == 12<br>";
                     echo 'Segunda multiplicação: 5 x 4 (que é o valor do $b) == 20<br>';
@@ -44,9 +44,23 @@
                     <u>EXERCÍCIO:<br>Criar aqui a mesma formula usando parêntesis assim: ($a + 3) * 4 + (5 * $b)</u>
                 </strong>   
 
-                    
-                
             </p>
+
+            <?php
+                        $a = 5;
+                        $b = 4; 
+                        
+                        echo 'Vamos calcular: ($a + 3) * 4 + (5 * $b)<br>';
+                        echo "Resultado: ";
+                        echo ($a + 3) * 4 + (5 * $b);
+                        echo "<br>Porque " . '$a' ." vale $a <br>";
+                        echo 'e $b vale ' . "$b" . '<br>'; 
+                        echo "Primeira soma: $a + 3 == 8<br>";
+                        echo "Primeira multiplicação: 8 * 4 == 32<br>";
+                        echo 'Segunda multiplicação: 5 * 4 (que é o valor do $b) == 20<br>';
+                        echo "Agora as somas: 20 + 32 é 52<br>";
+                        
+                ?>
             
                 
         </div>
