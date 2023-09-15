@@ -71,6 +71,19 @@
     </ul>
 
     <!-- Criar aqui seu programa PHP -->
+
+    <?php
+
+    $a = 5;
+
+     if($a >= 1) {
+       echo "A variável é maior que 1<br>";
+    } 
+
+    if($a > 1)
+    echo "A variável é maior que 1 ";
+
+    ?>
     
     
     <hr>
@@ -122,6 +135,24 @@
 
     <!-- Criar aqui seu programa PHP -->
 
+    <?php
+
+$produto = 'Ultrabook_ASUS';
+$estoque_atual = 0;
+$estoque_min = 14;
+
+echo "<h3>$produto</h3>";
+
+if ($estoque_atual < $estoque_min) {
+    echo "<span class=repor>É necessário comprar.</span>";
+    echo "<br>";
+    echo "<mark>URGENTE</mark>";
+} else {
+    echo "<span class=ok>Estoque OK!</span>";
+}
+
+    ?>
+
     
     <hr>
 
@@ -168,6 +199,34 @@
     <hr>
     
     <!-- Criar aqui seu programa PHP -->
+
+        <?php
+            // Esfiha
+            // Pastel
+            // Pizza
+            // Opção inválida
+
+
+        
+
+            // Criar uma variável para receber uma das opções da lista. Iniciar com uma delas.
+            $opcao = "Esfiha";
+
+            // Montar uma estrutura encadeada que verifique qual a opção escolhida
+            if ($opcao == "1") {
+                // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+                echo "Você pediu uma esfiha.";
+            } elseif ($opcao == "2") {
+                // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+                echo "Você pediu um pastel.";
+            } elseif ($opcao == "3") {
+                // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+                echo "Você pediu uma pizza.";
+            } else {
+                // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+                echo "Opção inválida.";
+        }
+        ?>
     
     <hr>
 
