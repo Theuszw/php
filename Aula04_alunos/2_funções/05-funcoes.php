@@ -19,6 +19,13 @@
 
             // 1ª Digitação (Aqui)
 
+            function dadosAutor() {
+                echo "<div>";
+                echo "<p>Mattia Binotto</p>";
+                echo "<p>Mattia.binotto@ferrari.f1</p>";
+                echo "</div>";
+            }
+
         ?>
 
         <section>
@@ -44,6 +51,9 @@
     
             <!-- 2ª Digitação (Aqui) -->
 
+            <p>Estamos no curso de <?=dadosCurso()?></p>
+            <p><?=dadosCurso()?> é ministrado no SENAI</p>
+
         <hr>
         
         <h2 class="destaque">Função com parâmetros (ou argumentos)</h2>
@@ -52,6 +62,12 @@
         <?php
 
             // 3ª Digitação (Aqui)
+
+            function soma ($valor1, $valor2, $valor3=0) {
+
+                $total = $valor1 + $valor2 + $valor3;
+                return $total;
+            }
 
         ?>
     
