@@ -120,6 +120,10 @@
 
             // 4ª Digitação (Aqui)
 
+            $formataPreco = function($valor) {
+                return "R$".number_format($valor,2, "," , ".");
+            };
+
         ?>
 
         <p> <?=$formataPreco(1000)?> </p>
@@ -140,6 +144,11 @@
 
 
             // 5ª Digitação (Aqui)
+
+            function calculaMedia (float $n1, float $n2): float {
+                $media = ($n1 + $n2)/2;
+                return $media;
+            }
             
 
         ?>
