@@ -144,11 +144,15 @@ $aluno2 = [
     <h2>Filtros</h2>
 <?php
 $email = "ignacio@gmail.com.br";
-$ataque = "<script> document.body.innerHTML = 'Sou ráqui!! hahahah >.<' </script>";
+$ataque = "<script> document.body.innerHTML = '<h1>Sou ráqui!! hahahah >.<</h1>' </script>";
 
 // echo $ataque;
 
 //  6ª Digitação (Aqui)
+
+$ataqueAnulado = filter_var($ataque,FILTER_SANITIZE_SPECIAL_CHARS);
+
+echo $ataqueAnulado;
 
 ?>
 
@@ -191,6 +195,18 @@ $senhaSegura = password_hash($senha, PASSWORD_DEFAULT);
 <!-- Como checar se a senha é a correta -->
 
 <!-- 7ª Digitação (Aqui)  -->
+
+<?php
+
+    $senhaDigitada = "123abc";
+
+    if(password_verify($senhaDigitada,$senhaSegura)) {
+        echo "<br><b style='color:green'>Senhas iguais!</b>";
+    } else {
+        echo "<br><b style='color:red'>Senhas diferentes!!</b>";
+    }
+
+?>
     
 </body>
 </html>
