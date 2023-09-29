@@ -16,9 +16,19 @@
 // Trim(param) -> Remove espaços antes e depois de strings
 $nome = "Ignacio Cunha        ";
 $nomeSemEspaco = trim($nome);
+
+$nome2 = "Matheus Ferreira     ";
+$nomeSemEspaco = trim($nome2);
 ?>
 
 <!-- 1ª Digitação (Aqui) -->
+
+<pre> <?=var_dump($nome)?> </pre>
+<pre> <?=var_dump(trim($nome))?> </pre>
+
+<p>Meu Teste.</p>
+<pre> <?=var_dump($nome2)?> </pre>
+<pre> <?=var_dump(trim($nome2))?> </pre>
 
 <!-- ___________________________________________________________ -->
 <!-- Substitui um texto por outro-->
@@ -26,9 +36,20 @@ $nomeSemEspaco = trim($nome);
 <?php
 $fraseFeia = "<p>Fulano é um bobão e xarope</p>";
 
+$fraseBonita = str_replace(
+    ["bobão", "xarope"], 
+    ["cara legal", "genial"],
+    $fraseFeia
+);
 
-//  2ª Digitação (Aqui)
 
+//  2ª Digitação (Aqui)   
+
+$fraseBonita = str_replace(
+    ["bobão", "xarope"], 
+    ["cara legal", "genial"],
+    $fraseFeia
+);
 
 echo $fraseFeia;
 echo $fraseBonita;
@@ -40,9 +61,20 @@ echo $fraseBonita;
 $linguagens = "HTML - CSS - JS";
 $arrayLinguagens = explode(" - ", $linguagens);
 
+$linguagens2 = "Matheus - Ferreira - do - Nascimento";
+$arrayLinguagens2 = explode(" - ", $linguagens2);
+
 ?>
 
 <!-- 3ª Digitação (Aqui) -->
+
+<pre> <?=var_dump($linguagens)?> </pre>
+<pre> <?=var_dump($arrayLinguagens)?> </pre>
+
+<pre> <?=var_dump($linguagens2)?> </pre>
+<pre> <?=var_dump($arrayLinguagens2)?> </pre>   
+
+
 
 <!-- ___________________________________________________________ -->
 <hr>
@@ -50,6 +82,13 @@ $arrayLinguagens = explode(" - ", $linguagens);
     <h3>implode()</h3>
 
 <!-- 4ª Digitação (Aqui) -->
+
+<?php
+
+$bandas = ["Savage","Nightwish","Ghost"];
+$stringBandas = implode(" | ",$bandas);
+
+?>
 
 <pre> <?=var_dump($bandas)?> </pre>
 <pre> <?=var_dump($stringBandas)?> </pre>
@@ -59,10 +98,44 @@ $arrayLinguagens = explode(" - ", $linguagens);
 
 <!-- 5ª Digitação (Aqui) -->
 
+<?php
+
+$aluno = [
+        "id" => "Matheus",
+        "idade" => 18,
+        "sexo" => "Masculino",
+        "cidade" => "Santo André"
+        ];
+
+        extract($aluno);
+
+?>
+
 <p> <?=$id?> </p>
 <p> <?=$idade?> </p>
 <p> <?=$sexo?> </p>
 <p> <?=$cidade?> </p>
+
+<hr>
+
+<?php
+
+
+$aluno2 = [
+    "id" => "Matheus",
+    "idade" => 18,
+    "numero" => 25,
+    "classe" => "1DE"
+];
+
+        extract($aluno2);
+
+?>
+
+<p> <?=$id?> </p>
+<p> <?=$idade?> </p>
+<p> <?=$numero?> </p>
+<p> <?=$classe?> </p>
 
 <!-- ___________________________________________________________ -->
 <hr>
